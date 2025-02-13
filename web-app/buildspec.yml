@@ -1,16 +1,15 @@
 version: 0.2
-
 phases:
   install:
-    commands:
-      - echo "Installing dependencies"
+    runtime-versions:
+      nodejs: latest
   build:
     commands:
       - echo "Building the application"
   post_build:
     commands:
-      - echo "Copying files to web server directory"
-      - sudo cp -r * /var/www/html/
+      - echo "Build complete!"
 artifacts:
   files:
     - '**/*'
+
